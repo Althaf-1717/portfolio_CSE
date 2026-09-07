@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shaik Althaf — Software Developer & Full-Stack Engineer</title>
+  <meta name="description" content="Shaik Althaf is a Computer Science Engineering student and Full-Stack Developer specializing in React, Node.js, C++, and scalable web architectures."/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+  <style>
+    .ph { display:inline-flex; align-items:center; justify-content:center; }
+    .skill-icon .ph, .card-icon .ph, .c-icon .ph, .tool-pill .ph { font-size:1.3rem; }
+    .social-btn .ph { font-size:1.15rem; }
+    .btn-send .ph { font-size:1rem; margin-right:0.4rem; }
+  </style>
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-logo">Althaf.</div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li class="mobile-cv-item"><a href="assets/Shaik_Althaf_Resume.pdf" download="Shaik_Althaf_Resume.pdf" style="color:var(--primary); font-weight:700;"><i class="ph ph-file-arrow-down"></i> Download CV (PDF)</a></li>
+  </ul>
+  <div class="nav-right" style="display:flex; align-items:center; gap:0.9rem;">
+    <a href="assets/Shaik_Althaf_Resume.pdf" download="Shaik_Althaf_Resume.pdf" class="nav-cv-btn" title="Download CV (PDF)"><i class="ph ph-file-arrow-down"></i> Download CV</a>
+    <a href="#contact" class="nav-cta">Get In Touch</a>
+    
+    <!-- THEME SWITCHER -->
+    <div class="theme-switcher">
+      <button class="ts-toggle" id="ts-toggle" title="Theme Settings" aria-label="Theme Settings"><i class="ph ph-gear"></i></button>
+      <div class="ts-panel" id="ts-panel">
+        <div class="ts-section">
+          <span class="ts-label">Dark Mode</span>
+          <button class="ts-mode-btn" id="mode-btn" aria-label="Toggle Dark Mode"><i class="ph ph-moon"></i></button>
+        </div>
+        <div class="ts-section" style="margin-top:0.5rem">
+          <span class="ts-label">Accent Color</span>
+          <div class="ts-colors">
+            <button class="ts-color" data-color="purple" style="background:#8b5cf6" title="Purple"></button>
+            <button class="ts-color" data-color="yellow" style="background:#eab308" title="Yellow"></button>
+            <button class="ts-color" data-color="green" style="background:#10b981" title="Green"></button>
+            <button class="ts-color active" data-color="orange" style="background:#f97316" title="Orange"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-right"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge anim-stagger anim-1"><span></span> Open to Software Opportunities</div>
+      <h1 class="hero-title anim-stagger anim-2">
+        From Ideas to Impact —<br><span class="name">Shaik Althaf</span>
+      </h1>
+      <p class="hero-role anim-stagger anim-3">Building <span class="typed" id="typed"></span></p>
+      <p class="hero-desc anim-stagger anim-4">
+        Computer Science Engineering undergraduate at Lovely Professional University. Passionate about building robust full-stack web applications, clean REST APIs, and solving problems with efficient data structures and algorithms.
+      </p>
+      <div class="hero-btns anim-stagger anim-5">
+        <a href="assets/Shaik_Althaf_Resume.pdf" download="Shaik_Althaf_Resume.pdf" class="btn-primary"><i class="ph ph-file-arrow-down"></i> Download CV</a>
+        <a href="#projects" class="btn-outline"><i class="ph ph-code"></i> View Projects</a>
+        <a href="https://github.com/Althaf-1717" target="_blank" rel="noopener noreferrer" class="btn-outline"><i class="ph ph-github-logo"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/shaik-althaf-dev/" target="_blank" rel="noopener noreferrer" class="btn-outline"><i class="ph ph-linkedin-logo"></i> LinkedIn</a>
+      </div>
+      <div class="hero-stats anim-stagger anim-6">
+        <div class="stat-item"><div class="stat-number">6+</div><div class="stat-label">Projects Built</div></div>
+        <div class="stat-item"><div class="stat-number">12+</div><div class="stat-label">Tech Stack Tools</div></div>
+        <div class="stat-item"><div class="stat-number">DSA</div><div class="stat-label">Placement Trained</div></div>
+      </div>
+    </div>
+    <div class="hero-visual anim-stagger anim-7">
+      <div class="photo-ring">
+        <div class="photo-orbit"><div class="orbit-dot"></div></div>
+        <div class="photo-inner">
+          <img src="assets/imgs/profile.jpg" alt="Shaik Althaf" onerror="this.style.display='none';document.getElementById('initials').style.display='flex'"/>
+          <div class="photo-initials" id="initials" style="display:none">SA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="fade-up">
+    <div class="section-tag">// about me</div>
+    <h2 class="section-title">Engineering Solutions <span>With Purpose</span></h2>
+    <p class="section-desc">Passionate about turning ideas into performant, real-world software products.</p>
+  </div>
+  <div class="about-grid" style="margin-top:3rem">
+    <div class="about-text fade-up">
+      <p>I'm <strong style="color:var(--text)">Shaik Althaf</strong>, a Computer Science &amp; Engineering student at Lovely Professional University and an aspiring Software Developer.</p>
+      <p>I enjoy building modern web applications, solving problems with code, and learning new technologies. My skills include <strong style="color:var(--text)">React.js, Next.js, Node.js, Express.js, Supabase, and databases</strong>.</p>
+      <p>I'm always focused on learning, building, and improving.</p>
+      <div class="about-tags">
+        <span class="tag">Problem Solving</span>
+        <span class="tag">Full-Stack Engineering</span>
+        <span class="tag">Data Structures &amp; Algorithms</span>
+        <span class="tag">REST API Architecture</span>
+        <span class="tag">Team Player</span>
+        <span class="tag">Adaptability</span>
+        <span class="tag">Quick Learner</span>
+      </div>
+      <div style="margin-top:2rem;">
+        <a href="assets/Shaik_Althaf_Resume.pdf" download="Shaik_Althaf_Resume.pdf" class="btn-primary" style="display:inline-flex; align-items:center; gap:0.55rem;">
+          <i class="ph ph-file-arrow-down"></i> Download Full Resume (PDF)
+        </a>
+      </div>
+    </div>
+    <div class="about-cards fade-up">
+      <div class="about-card">
+        <div class="card-icon"><i class="ph ph-graduation-cap"></i></div>
+        <div>
+          <div class="card-label">Degree &amp; University</div>
+          <div class="card-value">B.Tech in Computer Science &amp; Engineering — LPU</div>
+        </div>
+      </div>
+      <div class="about-card">
+        <div class="card-icon"><i class="ph ph-laptop"></i></div>
+        <div>
+          <div class="card-label">Specialization</div>
+          <div class="card-value">Full-Stack Web Development &amp; DSA</div>
+        </div>
+      </div>
+      <div class="about-card">
+        <div class="card-icon"><i class="ph ph-terminal-window"></i></div>
+        <div>
+          <div class="card-label">Core Languages</div>
+          <div class="card-value">C++, JavaScript, Python, C</div>
+        </div>
+      </div>
+      <div class="about-card">
+        <div class="card-icon"><i class="ph ph-briefcase"></i></div>
+        <div>
+          <div class="card-label">Current Status</div>
+          <div class="card-value">Open to Software Developer Roles &amp; Internships</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="background:var(--bg)">
+  <div class="fade-up">
+    <div class="section-tag">// technical expertise</div>
+    <h2 class="section-title">Skills &amp; <span>Proficiencies</span></h2>
+    <p class="section-desc">Practical expertise across programming languages, backend systems, databases, and modern web frameworks.</p>
+  </div>
+  <div class="skills-grid" id="skills-grid">
+    <div class="skill-card fade-up">
+      <div class="skill-header">
+        <div class="skill-name"><span class="skill-icon"><i class="ph ph-code"></i></span> C++ (DSA &amp; Problem Solving)</div>
+        <span class="skill-pct">88%</span>
+      </div>
+      <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-header">
+        <div class="skill-name"><span class="skill-icon"><i class="ph ph-brackets-curly"></i></span> JavaScript (ES6+ / Modern)</div>
+        <span class="skill-pct">90%</span>
+      </div>
+      <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-header">
+        <div class="skill-name"><span class="skill-icon"><i class="ph ph-atom"></i></span> React.js &amp; Next.js</div>
+        <span class="skill-pct">85%</span>
+      </div>
+      <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-header">
+        <div class="skill-name"><span class="skill-icon"><i class="ph ph-server"></i></span> Node.js &amp; Express.js</div>
+        <span class="skill-pct">86%</span>
+      </div>
+      <div class="skill-bar"><div class="skill-fill" data-width="86"></div></div>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-header">
+        <div class="skill-name"><span class="skill-icon"><i class="ph ph-database"></i></span> MongoDB &amp; PostgreSQL</div>
+        <span class="skill-pct">84%</span>
+      </div>
+      <div class="skill-bar"><div class="skill-fill" data-width="84"></div></div>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-header">
+        <div class="skill-name"><span class="skill-icon"><i class="ph ph-snake"></i></span> Python Programming</div>
+        <span class="skill-pct">80%</span>
+      </div>
+      <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-header">
+        <div class="skill-name"><span class="skill-icon"><i class="ph ph-layout"></i></span> HTML5 &amp; CSS3</div>
+        <span class="skill-pct">92%</span>
+      </div>
+      <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-header">
+        <div class="skill-name"><span class="skill-icon"><i class="ph ph-cloud"></i></span> Supabase &amp; REST APIs</div>
+        <span class="skill-pct">85%</span>
+      </div>
+      <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools" style="background:var(--bg); text-align:center; padding-top:0;">
+  <div class="fade-up">
+    <div class="section-tag">// developer stack</div>
+    <h2 class="section-title">Tools &amp; <span>Environments</span></h2>
+    <p class="section-desc" style="margin:0 auto">Languages, libraries, databases, and workflows I work with.</p>
+  </div>
+  <div class="tools-row">
+    <div class="tool-pill fade-up"><i class="ph ph-code"></i> C++</div>
+    <div class="tool-pill fade-up"><i class="ph ph-brackets-curly"></i> JavaScript (ES6+)</div>
+    <div class="tool-pill fade-up"><i class="ph ph-snake"></i> Python</div>
+    <div class="tool-pill fade-up"><i class="ph ph-atom"></i> React.js</div>
+    <div class="tool-pill fade-up"><i class="ph ph-lightning"></i> Next.js</div>
+    <div class="tool-pill fade-up"><i class="ph ph-lightning"></i> FastAPI</div>
+    <div class="tool-pill fade-up"><i class="ph ph-server"></i> Node.js</div>
+    <div class="tool-pill fade-up"><i class="ph ph-cloud"></i> Express.js</div>
+    <div class="tool-pill fade-up"><i class="ph ph-terminal"></i> C Language</div>
+    <div class="tool-pill fade-up"><i class="ph ph-database"></i> MongoDB</div>
+    <div class="tool-pill fade-up"><i class="ph ph-database"></i> PostgreSQL</div>
+    <div class="tool-pill fade-up"><i class="ph ph-hard-drives"></i> MySQL</div>
+    <div class="tool-pill fade-up"><i class="ph ph-fire"></i> Supabase</div>
+    <div class="tool-pill fade-up"><i class="ph ph-key"></i> JWT &amp; Bcrypt</div>
+    <div class="tool-pill fade-up"><i class="ph ph-chart-pie"></i> Chart.js</div>
+    <div class="tool-pill fade-up"><i class="ph ph-git-branch"></i> Git &amp; GitHub</div>
+    <div class="tool-pill fade-up"><i class="ph ph-terminal-window"></i> VS Code</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="fade-up">
+    <div class="section-tag">// featured projects</div>
+    <h2 class="section-title">Crafted <span>Software Solutions</span></h2>
+    <p class="section-desc">Key full-stack applications showcasing end-to-end architecture, state management, secure authentication, and database design.</p>
+  </div>
+  <div class="projects-grid">
+
+    <!-- PROJECT 1: BudgetX -->
+    <div class="project-card fade-up">
+      <div class="project-header-banner banner-budgetx">
+        <i class="ph ph-chart-line-up project-header-icon"></i>
+        <span class="project-timeline">Apr '25 – May '25</span>
+        <h3 class="project-badge-title">BudgetX</h3>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">Full-Stack</span>
+          <span class="project-tag">Node.js / MongoDB</span>
+          <span class="project-tag">Chart.js</span>
+        </div>
+        <div class="project-name">Currency &amp; Budgeting Platform</div>
+        <p class="project-desc">Full-stack budgeting platform with live multi-currency conversion, Chart.js analytics, and JWT auth.</p>
+        <div class="project-actions">
+          <a href="https://github.com/Althaf-1717" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-code">
+            <i class="ph ph-github-logo"></i> View on GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 2: Cartly -->
+    <div class="project-card fade-up">
+      <div class="project-header-banner banner-cartly">
+        <i class="ph ph-shopping-cart-simple project-header-icon"></i>
+        <span class="project-timeline">Jun '24 – Aug '24</span>
+        <h3 class="project-badge-title">Cartly</h3>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">React.js</span>
+          <span class="project-tag">Supabase</span>
+          <span class="project-tag">PostgreSQL</span>
+        </div>
+        <div class="project-name">E-Commerce &amp; Admin Suite</div>
+        <p class="project-desc">E-commerce ecosystem with storefront, admin portal, product CRUD, role-based auth, and order tracking.</p>
+        <div class="project-actions">
+          <a href="https://github.com/Althaf-1717" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-code">
+            <i class="ph ph-github-logo"></i> View on GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 3: PAS GPT -->
+    <div class="project-card fade-up">
+      <div class="project-header-banner banner-ai">
+        <i class="ph ph-brain project-header-icon"></i>
+        <span class="project-timeline">FastAPI &amp; GenAI</span>
+        <h3 class="project-badge-title">PAS GPT</h3>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="project-tag">FastAPI / Python</span>
+          <span class="project-tag">Gemini &amp; Groq</span>
+          <span class="project-tag">Async MongoDB</span>
+        </div>
+        <div class="project-name">Enterprise Cognitive AI Platform</div>
+        <p class="project-desc">AI chat platform powered by Gemini &amp; Groq APIs with async MongoDB, email filtering, and JWT security.</p>
+        <div class="project-actions">
+          <a href="https://github.com/Althaf-1717/AI-Project" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-code">
+            <i class="ph ph-github-logo"></i> View on GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div style="text-align:center; margin-top:2rem;">
+    <a href="projects.html" class="btn-outline view-more-btn">
+      <i class="ph ph-caret-right"></i> View More Projects
+    </a>
+  </div>
+</section>
+
+<!-- EXPERIENCE, TRAINING & CERTIFICATES -->
+<section id="experience" style="background:var(--bg)">
+  <div class="fade-up">
+    <div class="section-tag">// training &amp; credentials</div>
+    <h2 class="section-title">Experience &amp; <span>Certifications</span></h2>
+    <p class="section-desc">Training programs, industry certifications, and leadership roles.</p>
+  </div>
+  <div class="experience-grid">
+
+    <!-- CARD 1: DSA Training -->
+    <a href="assets/imgs/dsa-training.png" target="_blank" class="cert-card fade-up" style="text-decoration: none; color: inherit;">
+      <div class="cert-banner" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/imgs/dsa-training.png') center/cover;">
+        <i class="ph ph-code" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);"></i>
+        <span class="cert-type-badge" style="background: rgba(255,255,255,0.9); color: #000;">Training</span>
+      </div>
+      <div class="cert-body">
+        <div class="exp-date">July '2026</div>
+        <div class="exp-title">Summer Training — DSA for Placements</div>
+        <div class="exp-issuer">Lovely Professional University</div>
+        <p class="exp-desc">Placement-focused DSA training covering time/space complexity and coding interviews.</p>
+      </div>
+    </a>
+
+    <!-- CARD 2: DBMS Part 1 -->
+    <a href="assets/imgs/dbms-part1.jpg" target="_blank" class="cert-card fade-up" style="text-decoration: none; color: inherit;">
+      <div class="cert-banner" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/imgs/dbms-part1.jpg') center/cover;">
+        <i class="ph ph-database" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);"></i>
+        <span class="cert-type-badge" style="background: rgba(255,255,255,0.9); color: #000;">Certificate</span>
+      </div>
+      <div class="cert-body">
+        <div class="exp-date">July 15, 2026</div>
+        <div class="exp-title">Database Management System Part - 1</div>
+        <div class="exp-issuer">Infosys Springboard</div>
+        <p class="exp-desc">SQL, relational algebra, and database design fundamentals.</p>
+      </div>
+    </a>
+
+    <!-- CARD 3: DBMS Part 2 -->
+    <a href="assets/imgs/dbms-part2.jpg" target="_blank" class="cert-card fade-up" style="text-decoration: none; color: inherit;">
+      <div class="cert-banner" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/imgs/dbms-part2.jpg') center/cover;">
+        <i class="ph ph-database" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);"></i>
+        <span class="cert-type-badge" style="background: rgba(255,255,255,0.9); color: #000;">Certificate</span>
+      </div>
+      <div class="cert-body">
+        <div class="exp-date">July 16, 2026</div>
+        <div class="exp-title">Database Management System Part - 2</div>
+        <div class="exp-issuer">Infosys Springboard</div>
+        <p class="exp-desc">Advanced database normalization, indexing, and ACID properties.</p>
+      </div>
+    </a>
+
+  </div>
+  <div style="text-align:center; margin-top:2rem;">
+    <a href="certificates.html" class="btn-outline view-more-btn">
+      <i class="ph ph-caret-right"></i> View More Certificates
+    </a>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="about" id="education">
+  <div class="fade-up">
+    <div class="section-tag">// academic background</div>
+    <h2 class="section-title">Education &amp; <span>Milestones</span></h2>
+    <p class="section-desc">A progressive academic foundation spanning school, college, and university engineering degrees.</p>
+  </div>
+  <!-- LPU (University) - Full Width Box -->
+  <div class="edu-card fade-up lpu-card">
+    <div class="lpu-img-container">
+      <img src="assets/imgs/lpu.jpg" alt="Lovely Professional University Campus">
+    </div>
+    <div class="lpu-content">
+      <div class="edu-header" style="margin-bottom: 0.8rem;">
+        <span class="edu-badge">CGPA: 6.27</span>
+        <span style="font-size:0.8rem; color:var(--muted); font-family:'Fira Code', monospace;">Since Aug '20</span>
+      </div>
+      <h3 class="edu-school" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Lovely Professional University</h3>
+      <div class="edu-degree" style="font-size: 1.05rem;">Bachelor of Technology — Computer Science and Engineering</div>
+      <div class="edu-location" style="margin-top: 0.5rem;"><i class="ph ph-map-pin"></i> Phagwara, Punjab</div>
+      <ul class="lpu-bullets">
+        <li>Specializing in modern full-stack web applications and scalable software systems.</li>
+        <li>Active participant and organizer in campus hackathons and technical events.</li>
+        <li>Completed rigorous coursework in Data Structures, Algorithms, and Database Management.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Intermediate & High School - Grid Below -->
+  <div class="edu-grid" style="margin-top: 0;">
+
+    <div class="edu-card fade-up">
+      <div class="edu-header">
+        <span class="edu-badge">Score: 77%</span>
+        <span style="font-size:0.8rem; color:var(--muted); font-family:'Fira Code', monospace;">Apr '18 – Mar '20</span>
+      </div>
+      <h3 class="edu-school">Sri Chaitanya Junior College</h3>
+      <div class="edu-degree">Intermediate Education</div>
+      <div class="edu-location"><i class="ph ph-map-pin"></i> Martur, Andhra Pradesh</div>
+    </div>
+
+    <div class="edu-card fade-up">
+      <div class="edu-header">
+        <span class="edu-badge">Score: 90%</span>
+        <span style="font-size:0.8rem; color:var(--muted); font-family:'Fira Code', monospace;">Apr '16 – Mar '18</span>
+      </div>
+      <h3 class="edu-school">Sri Chaitanya High School</h3>
+      <div class="edu-degree">Matriculation (Secondary Education)</div>
+      <div class="edu-location"><i class="ph ph-map-pin"></i> Martur, Andhra Pradesh</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RESUME / CV PREVIEW -->
+<section class="resume-section" id="resume">
+  <div class="fade-up">
+    <div class="section-tag">// curriculum vitae</div>
+    <h2 class="section-title">Resume &amp; <span>Credentials</span></h2>
+    <p class="section-desc" style="margin:0 auto">Preview my official CV below or download a verified copy for your records.</p>
+  </div>
+  
+  <div class="resume-preview-wrap fade-up">
+    <div class="resume-toolbar">
+      <div class="resume-toolbar-left">
+        <i class="ph ph-file-pdf"></i>
+        <span>Shaik_Althaf_Resume.pdf</span>
+      </div>
+      <div class="resume-toolbar-actions">
+        <a href="assets/Shaik_Althaf_Resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn-sm outline" title="Open in new tab">
+          <i class="ph ph-arrow-square-out"></i> Open PDF
+        </a>
+        <a href="assets/Shaik_Althaf_Resume.pdf" download="Shaik_Althaf_Resume.pdf" class="resume-btn-sm primary" title="Download Resume">
+          <i class="ph ph-file-arrow-down"></i> Download CV
+        </a>
+      </div>
+    </div>
+    <div class="resume-doc-body">
+      <img src="assets/Shaik_Althaf_Resume.png" alt="Shaik Althaf Resume Preview" class="resume-doc-img" style="width: 100%; border-radius: 8px;" />
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="about" id="contact">
+  <div class="fade-up">
+    <div class="section-tag">// contact</div>
+    <h2 class="section-title">Let's Connect &amp; <span>Collaborate</span></h2>
+    <p class="section-desc">Interested in discussing a software development role, full-stack opportunity, or project? Feel free to reach out.</p>
+  </div>
+  <div class="contact-wrap">
+    <div class="contact-info fade-up">
+      <a href="mailto:althafshaik1717@gmail.com" class="contact-item">
+        <div class="c-icon"><i class="ph ph-envelope-simple"></i></div>
+        <div>
+          <div class="c-label">Email</div>
+          <div class="c-value">althafshaik1717@gmail.com</div>
+        </div>
+      </a>
+      <a href="tel:+919398870585" class="contact-item">
+        <div class="c-icon"><i class="ph ph-phone"></i></div>
+        <div>
+          <div class="c-label">Mobile</div>
+          <div class="c-value">+91-9398870585</div>
+        </div>
+      </a>
+      <div class="contact-item">
+        <div class="c-icon"><i class="ph ph-map-pin"></i></div>
+        <div>
+          <div class="c-label">Locations</div>
+          <div class="c-value">Phagwara, Punjab / Martur, Andhra Pradesh</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="c-icon"><i class="ph ph-briefcase"></i></div>
+        <div>
+          <div class="c-label">Availability</div>
+          <div class="c-value" style="color:#22c55e">✓ Ready for Opportunities &amp; Roles</div>
+        </div>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/shaik-althaf-dev/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+        <a href="https://github.com/Althaf-1717" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub"><i class="ph ph-github-logo"></i></a>
+        <a href="mailto:althafshaik1717@gmail.com" class="social-btn" title="Email"><i class="ph ph-envelope"></i></a>
+      </div>
+    </div>
+    <form action="https://formsubmit.co/althafshaik1717@gmail.com" method="POST" class="contact-form fade-up" id="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="First Name" placeholder="John" required/>
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="Last Name" placeholder="Doe" required/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="john@example.com" required/>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="_subject" placeholder="Opportunity / Project Inquiry" required/>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Hi Althaf, we'd like to talk about..." required></textarea>
+      </div>
+      <button type="submit" class="btn-send" id="send-btn"><i class="ph ph-paper-plane-tilt"></i> Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Designed &amp; Built with <i class="ph-fill ph-heart-fill" style="color:#ef4444; vertical-align:middle"></i> by <span>Shaik Althaf</span> · Software Developer © 2026</p>
+</footer>
+
+<script>
+  // CURSOR
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursor-ring');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX;
+    my = e.clientY;
+    cursor.style.left = mx - 6 + 'px';
+    cursor.style.top = my - 6 + 'px';
+  });
+  function animateRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx - 18 + 'px';
+    ring.style.top = ry - 18 + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  document.querySelectorAll('a, button, .project-card, .about-card, .exp-card, .edu-card, .tool-pill, .tag, .cert-card').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.transform = 'scale(2.2)';
+      ring.style.transform = 'scale(1.5)';
+      ring.style.borderColor = 'rgba(var(--primary-rgb),0.8)';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.transform = 'scale(1)';
+      ring.style.transform = 'scale(1)';
+      ring.style.borderColor = 'rgba(var(--primary-rgb),0.5)';
+    });
+  });
+
+  // NAVBAR SCROLL & HAMBURGER
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('mobile-open');
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('mobile-open');
+    });
+  });
+
+  // TYPED TEXT LOOP
+  const phrases = [
+    'Full-Stack Web Apps.',
+    'Scalable REST APIs.',
+    'Efficient DSA Solutions.',
+    'Modern User Interfaces.',
+    'Reliable Database Systems.'
+  ];
+  let pi = 0, ci = 0, deleting = false;
+  const typed = document.getElementById('typed');
+  function typeLoop() {
+    const phrase = phrases[pi];
+    if (!deleting) {
+      typed.textContent = phrase.slice(0, ++ci);
+      if (ci === phrase.length) {
+        deleting = true;
+        setTimeout(typeLoop, 1800);
+        return;
+      }
+    } else {
+      typed.textContent = phrase.slice(0, --ci);
+      if (ci === 0) {
+        deleting = false;
+        pi = (pi + 1) % phrases.length;
+      }
+    }
+    setTimeout(typeLoop, deleting ? 45 : 80);
+  }
+  typeLoop();
+
+  // INTERSECTION OBSERVER FOR FADE-UP & SKILL PROGRESS BARS
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        e.target.querySelectorAll('.skill-fill').forEach(bar => {
+          bar.style.width = bar.dataset.width + '%';
+        });
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  document.querySelectorAll('.skill-card').forEach(card => {
+    const skillObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const fill = e.target.querySelector('.skill-fill');
+          if (fill) fill.style.width = fill.dataset.width + '%';
+        }
+      });
+    }, { threshold: 0.25 });
+    skillObserver.observe(card);
+  });
+
+  // THEME SWITCHER
+  const tsToggle = document.getElementById('ts-toggle');
+  const tsPanel = document.getElementById('ts-panel');
+  const modeBtn = document.getElementById('mode-btn');
+  const tsColors = document.querySelectorAll('.ts-color');
+  const htmlEl = document.documentElement;
+
+  tsToggle.addEventListener('click', () => tsPanel.classList.toggle('active'));
+  document.addEventListener('click', (e) => {
+    if (!tsToggle.contains(e.target) && !tsPanel.contains(e.target)) {
+      tsPanel.classList.remove('active');
+    }
+  });
+
+  modeBtn.addEventListener('click', () => {
+    if (htmlEl.getAttribute('data-theme') === 'dark') {
+      htmlEl.removeAttribute('data-theme');
+      modeBtn.innerHTML = '<i class="ph ph-moon"></i>';
+      localStorage.setItem('portfolio_theme', 'light');
+    } else {
+      htmlEl.setAttribute('data-theme', 'dark');
+      modeBtn.innerHTML = '<i class="ph ph-sun"></i>';
+      localStorage.setItem('portfolio_theme', 'dark');
+    }
+  });
+
+  tsColors.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tsColors.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const color = btn.getAttribute('data-color');
+      if (color === 'orange') {
+        htmlEl.removeAttribute('data-color');
+      } else {
+        htmlEl.setAttribute('data-color', color);
+      }
+      localStorage.setItem('portfolio_color', color);
+    });
+  });
+
+  // RESTORE SAVED PREFERENCES
+  const savedTheme = localStorage.getItem('portfolio_theme');
+  if (savedTheme === 'dark') {
+    htmlEl.setAttribute('data-theme', 'dark');
+    modeBtn.innerHTML = '<i class="ph ph-sun"></i>';
+  }
+  const savedColor = localStorage.getItem('portfolio_color');
+  if (savedColor && savedColor !== 'orange') {
+    htmlEl.setAttribute('data-color', savedColor);
+    tsColors.forEach(b => {
+      b.classList.remove('active');
+      if (b.getAttribute('data-color') === savedColor) b.classList.add('active');
+    });
+  }
+
+</script>
+</body>
+</html>

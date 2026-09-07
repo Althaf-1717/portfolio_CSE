@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Certificates — Shaik Althaf</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+  <style>
+    .ph { display:inline-flex; align-items:center; justify-content:center; }
+    .subpage-hero {
+      padding: 8rem 5vw 3rem;
+      text-align: center;
+      background: var(--bg2);
+      position: relative;
+    }
+    .subpage-hero::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+      background: var(--border);
+    }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.88rem; font-weight: 600;
+      color: var(--primary); text-decoration: none;
+      margin-bottom: 1.5rem; transition: gap 0.3s;
+    }
+    .back-link:hover { gap: 0.7rem; }
+    .subpage-content {
+      padding: 4rem 5vw 5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo" style="text-decoration:none;">Althaf.</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#skills">Skills</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right" style="display:flex; align-items:center; gap:0.9rem;">
+    <a href="assets/Shaik_Althaf_Resume.pdf" download="Shaik_Althaf_Resume.pdf" class="nav-cv-btn" title="Download CV (PDF)"><i class="ph ph-file-arrow-down"></i> Download CV</a>
+    <a href="index.html#contact" class="nav-cta">Get In Touch</a>
+    <!-- THEME SWITCHER -->
+    <div class="theme-switcher">
+      <button class="ts-toggle" id="ts-toggle" title="Theme Settings" aria-label="Theme Settings"><i class="ph ph-gear"></i></button>
+      <div class="ts-panel" id="ts-panel">
+        <div class="ts-section">
+          <span class="ts-label">Dark Mode</span>
+          <button class="ts-mode-btn" id="mode-btn" aria-label="Toggle Dark Mode"><i class="ph ph-moon"></i></button>
+        </div>
+        <div class="ts-section" style="margin-top:0.5rem">
+          <span class="ts-label">Accent Color</span>
+          <div class="ts-colors">
+            <button class="ts-color" data-color="purple" style="background:#8b5cf6" title="Purple"></button>
+            <button class="ts-color" data-color="yellow" style="background:#eab308" title="Yellow"></button>
+            <button class="ts-color" data-color="green" style="background:#10b981" title="Green"></button>
+            <button class="ts-color active" data-color="orange" style="background:#f97316" title="Orange"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="subpage-hero">
+  <a href="index.html#experience" class="back-link fade-up"><i class="ph ph-arrow-left"></i> Back to Home</a>
+  <div class="fade-up">
+    <div class="section-tag">// all credentials</div>
+    <h2 class="section-title">Experience &amp; <span>Certifications</span></h2>
+    <p class="section-desc">Training programs, industry certifications, and leadership roles.</p>
+  </div>
+</section>
+
+<!-- ALL CERTIFICATES -->
+<section class="subpage-content">
+  <div class="experience-grid">
+
+    <!-- CARD 1: DSA Training -->
+    <a href="assets/imgs/dsa-training.png" target="_blank" class="cert-card fade-up" style="text-decoration: none; color: inherit;">
+      <div class="cert-banner" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/imgs/dsa-training.png') center/cover;">
+        <i class="ph ph-code" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);"></i>
+        <span class="cert-type-badge" style="background: rgba(255,255,255,0.9); color: #000;">Training</span>
+      </div>
+      <div class="cert-body">
+        <div class="exp-date">July '2026</div>
+        <div class="exp-title">Summer Training — DSA for Placements</div>
+        <div class="exp-issuer">Lovely Professional University</div>
+        <p class="exp-desc">Placement-focused DSA training covering time/space complexity and coding interviews.</p>
+      </div>
+    </a>
+
+    <!-- CARD 2: DBMS Part 1 -->
+    <a href="assets/imgs/dbms-part1.jpg" target="_blank" class="cert-card fade-up" style="text-decoration: none; color: inherit;">
+      <div class="cert-banner" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/imgs/dbms-part1.jpg') center/cover;">
+        <i class="ph ph-database" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);"></i>
+        <span class="cert-type-badge" style="background: rgba(255,255,255,0.9); color: #000;">Certificate</span>
+      </div>
+      <div class="cert-body">
+        <div class="exp-date">July 15, 2026</div>
+        <div class="exp-title">Database Management System Part - 1</div>
+        <div class="exp-issuer">Infosys Springboard</div>
+        <p class="exp-desc">SQL, relational algebra, and database design fundamentals.</p>
+      </div>
+    </a>
+
+    <!-- CARD 3: DBMS Part 2 -->
+    <a href="assets/imgs/dbms-part2.jpg" target="_blank" class="cert-card fade-up" style="text-decoration: none; color: inherit;">
+      <div class="cert-banner" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/imgs/dbms-part2.jpg') center/cover;">
+        <i class="ph ph-database" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);"></i>
+        <span class="cert-type-badge" style="background: rgba(255,255,255,0.9); color: #000;">Certificate</span>
+      </div>
+      <div class="cert-body">
+        <div class="exp-date">July 16, 2026</div>
+        <div class="exp-title">Database Management System Part - 2</div>
+        <div class="exp-issuer">Infosys Springboard</div>
+        <p class="exp-desc">Advanced database normalization, indexing, and ACID properties.</p>
+      </div>
+    </a>
+
+    <!-- CARD 4: React.js -->
+    <a href="assets/imgs/react-cert.jpg" target="_blank" class="cert-card fade-up" style="text-decoration: none; color: inherit;">
+      <div class="cert-banner" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/imgs/react-cert.jpg') center/cover;">
+        <i class="ph ph-atom" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);"></i>
+        <span class="cert-type-badge" style="background: rgba(255,255,255,0.9); color: #000;">Certificate</span>
+      </div>
+      <div class="cert-body">
+        <div class="exp-date">Mar 22, 2025</div>
+        <div class="exp-title">React.js Specialization</div>
+        <div class="exp-issuer">Tech Veda</div>
+        <p class="exp-desc">Hands-on mastery of React components, hooks, virtual DOM, and state-driven frontends.</p>
+      </div>
+    </a>
+
+    <!-- CARD 5: Python -->
+    <a href="assets/imgs/python-cert.pdf" target="_blank" class="cert-card fade-up" style="text-decoration: none; color: inherit;">
+      <div class="cert-banner" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/imgs/python-cert.png') center/cover;">
+        <i class="ph ph-snake" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);"></i>
+        <span class="cert-type-badge" style="background: rgba(255,255,255,0.9); color: #000;">Certificate</span>
+      </div>
+      <div class="cert-body">
+        <div class="exp-date">Dec 2024</div>
+        <div class="exp-title">Python Programming in Hindi</div>
+        <div class="exp-issuer">Great Learning Academy</div>
+        <p class="exp-desc">Core Python syntax, OOP, algorithmic problem solving, and standard libraries.</p>
+      </div>
+    </a>
+
+    <!-- CARD 6: Oracle AI -->
+    <a href="assets/imgs/oracle-ai-cert.pdf" target="_blank" class="cert-card fade-up" style="text-decoration: none; color: inherit;">
+      <div class="cert-banner" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/imgs/oracle-ai-cert.png') center/cover;">
+        <i class="ph ph-brain" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);"></i>
+        <span class="cert-type-badge" style="background: rgba(255,255,255,0.9); color: #000;">Certificate</span>
+      </div>
+      <div class="cert-body">
+        <div class="exp-date">Aug 22, 2026</div>
+        <div class="exp-title">OCI Certified AI Foundations Associate</div>
+        <div class="exp-issuer">Oracle University</div>
+        <p class="exp-desc">Recognized by Oracle Corporation as an Oracle Cloud Infrastructure Certified AI Foundations Associate.</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<script>
+  // CURSOR
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursor-ring');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx - 6 + 'px';
+    cursor.style.top = my - 6 + 'px';
+  });
+  function animateRing() {
+    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+    ring.style.left = rx - 18 + 'px'; ring.style.top = ry - 18 + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+  document.querySelectorAll('a, button, .cert-card').forEach(el => {
+    el.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(2.2)'; ring.style.transform = 'scale(1.5)'; ring.style.borderColor = 'rgba(var(--primary-rgb),0.8)'; });
+    el.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; ring.style.transform = 'scale(1)'; ring.style.borderColor = 'rgba(var(--primary-rgb),0.5)'; });
+  });
+
+  // NAVBAR
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('mobile-open'));
+  navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('mobile-open')));
+
+  // FADE-UP OBSERVER
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // THEME SWITCHER
+  const tsToggle = document.getElementById('ts-toggle');
+  const tsPanel = document.getElementById('ts-panel');
+  const modeBtn = document.getElementById('mode-btn');
+  const tsColors = document.querySelectorAll('.ts-color');
+  const htmlEl = document.documentElement;
+  tsToggle.addEventListener('click', () => tsPanel.classList.toggle('active'));
+  document.addEventListener('click', (e) => { if (!tsToggle.contains(e.target) && !tsPanel.contains(e.target)) tsPanel.classList.remove('active'); });
+  modeBtn.addEventListener('click', () => {
+    if (htmlEl.getAttribute('data-theme') === 'dark') { htmlEl.removeAttribute('data-theme'); modeBtn.innerHTML = '<i class="ph ph-moon"></i>'; localStorage.setItem('portfolio_theme', 'light'); }
+    else { htmlEl.setAttribute('data-theme', 'dark'); modeBtn.innerHTML = '<i class="ph ph-sun"></i>'; localStorage.setItem('portfolio_theme', 'dark'); }
+  });
+  tsColors.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tsColors.forEach(b => b.classList.remove('active')); btn.classList.add('active');
+      const color = btn.getAttribute('data-color');
+      if (color === 'orange') htmlEl.removeAttribute('data-color'); else htmlEl.setAttribute('data-color', color);
+      localStorage.setItem('portfolio_color', color);
+    });
+  });
+  const savedTheme = localStorage.getItem('portfolio_theme');
+  if (savedTheme === 'dark') { htmlEl.setAttribute('data-theme', 'dark'); modeBtn.innerHTML = '<i class="ph ph-sun"></i>'; }
+  const savedColor = localStorage.getItem('portfolio_color');
+  if (savedColor && savedColor !== 'orange') {
+    htmlEl.setAttribute('data-color', savedColor);
+    tsColors.forEach(b => { b.classList.remove('active'); if (b.getAttribute('data-color') === savedColor) b.classList.add('active'); });
+  }
+</script>
+</body>
+</html>
